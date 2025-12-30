@@ -26,7 +26,7 @@ export default function App() {
         invite you to their wedding</p>
 
           <EventCards />
-          <MusicToggle />
+          <MusicToggle autoPlay={entered} />
         </div>
       )}
     </div>

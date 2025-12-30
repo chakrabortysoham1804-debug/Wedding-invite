@@ -1,8 +1,17 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-export default function MusicToggle() {
+export default function MusicToggle({ autoPlay }) {
   const audioRef = useRef(null);
-  const [playing, setPlaying] = useState(false);
+  const [playing, setPlaying] = useState(true);
+
+  useEffect(() => {
+    if (autoPlay && audioRef.current) {
+      audioRef.current
+        .play()
+        .then(() => setPlaying(true))
+        .catch((err) => console.error("Autoplay blocked:", err));
+    }
+  }, [autoPlay]);
 
   const toggleMusic = async () => {
     if (!audioRef.current) return;
@@ -15,7 +24,7 @@ export default function MusicToggle() {
       }
       setPlaying(!playing);
     } catch (err) {
-      console.error("Audio play failed:", err);
+      console.error("Audio toggle failed:", err);
     }
   };
 
