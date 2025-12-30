@@ -3,6 +3,7 @@ import EnterScreen from "./Components/EnterScreen";
 import EventCards from "./Components/EventCards";
 import MusicToggle from "./Components/MusicToggle";
 import Petals from "./Components/Petals";
+import RSVP from "./Components/RSVP";
 
 export default function App() {
   const [entered, setEntered] = useState(false);
@@ -26,6 +27,7 @@ export default function App() {
         invite you to their wedding</p>
 
           <EventCards />
+          <RSVP />
           <MusicToggle autoPlay={entered} />
         </div>
       )}

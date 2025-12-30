@@ -224,3 +224,49 @@ html, body {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(196, 69, 117, 0.25);
 }
+/* ===== RSVP ===== */
+.rsvp-section {
+  margin: 40px 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.rsvp-form {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 18px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.rsvp-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+.rsvp-form button {
+  background: #c44575;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.rsvp-thankyou {
+  text-align: center;
+  margin: 30px;
+  font-size: 18px;
+  color: #ffe3ee;
+}
