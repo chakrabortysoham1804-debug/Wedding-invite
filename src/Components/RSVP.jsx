@@ -47,13 +47,6 @@ export default function RSVP() {
           onChange={handleChange}
         />
 
-        <input
-          name="phone"
-          placeholder="Phone Number"
-          required
-          onChange={handleChange}
-        />
-
         <select name="guests" onChange={handleChange}>
           <option value="1">1 Guest</option>
           <option value="2">2 Guests</option>
