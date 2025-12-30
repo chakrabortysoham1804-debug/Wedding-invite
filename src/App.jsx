@@ -19,8 +19,11 @@ export default function App() {
         <EnterScreen onEnter={() => setEntered(true)} />
       ) : (
         <div className="content">
-          <h1>Sister’s Wedding 💍</h1>
-          <p>We are delighted to invite you</p>
+        <h1 className="invite-title">
+        Sanchari &amp; Soubhagya
+        </h1>
+        <p className="invite-subtitle">
+        invite you to their wedding</p>
 
           <EventCards />
           <MusicToggle />
